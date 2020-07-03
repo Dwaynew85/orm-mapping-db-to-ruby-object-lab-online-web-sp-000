@@ -55,11 +55,11 @@ class Student
   end
 
   self.all_students_in_grade_9
-  sql = <<-SQL 
+  sql = <<-SQL
   SELECT *
-  FROM students 
+  FROM students
   WHERE grade = 9
-  SQL 
+  SQL
 
   DB[:conn].execute(sql).map {|student| self.new_from_db(studnt)}
 end
