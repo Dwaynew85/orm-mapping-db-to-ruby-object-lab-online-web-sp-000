@@ -82,6 +82,6 @@ class Student
     LIMIT ?
     SQL
 
-    DB[:conn].execute(sql, num)
+    DB[:conn].execute(sql, num).map {|student| self.new_from_db(student)}
   end
 end
