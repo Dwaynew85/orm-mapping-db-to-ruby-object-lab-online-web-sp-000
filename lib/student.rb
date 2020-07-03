@@ -61,6 +61,6 @@ class Student
     WHERE grade = 9
     SQL
 
-    DB[:conn].execute(sql).map {|student| self.new_from_db(studnt)}
+    DB[:conn].execute(sql).map {|student| self.new_from_db(student)}
   end
 end
